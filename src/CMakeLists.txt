@@ -31,13 +31,13 @@ set_tests_properties(
 )
 set_tests_properties(
     Hello_Two
-    PROPERTIES RESOURCE_GROUPS "devices:2"
+    PROPERTIES RESOURCE_GROUPS "2,devices:1"
 )
 set_tests_properties(
     Hello_Three
-    PROPERTIES RESOURCE_GROUPS "devices:3"
+    PROPERTIES RESOURCE_GROUPS "3,devices:1"
 )
 set_tests_properties(
     Hello_Four
-    PROPERTIES RESOURCE_GROUPS "devices:4"
+    PROPERTIES RESOURCE_GROUPS "4,devices:1"
 )
