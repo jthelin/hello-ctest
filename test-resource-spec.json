@@ -1,0 +1,28 @@
+{
+  "version": {
+    "major": 1,
+    "minor": 0
+  },
+  "local": [
+    {
+      "devices": [
+        {
+          "id": "1",
+          "slots": 1
+        },
+        {
+          "id": "2",
+          "slots": 1
+        },
+        {
+          "id": "34",
+          "slots": 2
+        },
+        {
+          "id": "1234",
+          "slots": 4
+        }
+      ]
+    }
+  ]
+}
