@@ -2,7 +2,7 @@
 
 std::string name = "World";
 
-int main(int argc, char** argv) {
+int main(int argc, char **argv) {
     if (argc > 1) {
         name = argv[1];
     }
@@ -22,7 +22,10 @@ int main(int argc, char** argv) {
         std::transform(grp_ids_var.begin(), grp_ids_var.end(), grp_ids_var.begin(), toupper);
         std::cout << "Env variable: " << grp_ids_var << std::endl;
         std::string grp_ids = getenv(grp_ids_var.c_str());
-        std::cout << grp_name << " - Properties: " << grp_ids << std::endl;
+        std::cout << "Resource Group " << g
+                  << " : Type = " << grp_type
+                  << " Properties = " << grp_ids
+                  << std::endl;
     }
 
     return EXIT_SUCCESS;
