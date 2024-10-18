@@ -1,0 +1,36 @@
+---
+name: ubuntu_build
+
+'on':
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  build_path: ${{github.workspace}}/build
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create Build Environment
+        run: cmake -E make_directory ${{env.build_path}}
+
+      - name: Configure CMake
+        working-directory: ${{env.build_path}}
+        run: cmake ../
+
+      - name: Build
+        working-directory: ${{env.build_path}}
+        run: cmake --build .
+
+      - name: Test
+        working-directory: ${{env.build_path}}
+        run: ctest
+...
